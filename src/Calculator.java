@@ -59,6 +59,41 @@ public class Calculator {
             button.setFont(new Font("Arial",Font.PLAIN, 30));
             button.setText(buttonValue);
             buttoPanel.add(button);
+            button.setFocusable(false);
+            button.setBorder(new LineBorder(customBlack));
+
+            if(Arrays.asList(topSymbols).contains(buttonValue)){
+                button.setBackground(customLightGray);
+                button.setForeground(customBlack);
+                
+            }else if(Arrays.asList(rightSymbols).contains(buttonValue)){
+                button.setBackground(customOrange);
+                button.setForeground(Color.white);
+            }else{
+                button.setBackground(customDarkGray);
+                button.setForeground(Color.white);
+            }
+            buttoPanel.add(button);
+
+            button.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e){
+                    JButton button = (JButton) e.getSource();
+                    String buttonValue = button.getText();
+                    if(Arrays.asList(rightSymbols).contains(buttonValue)){
+
+                    }else if(Arrays.asList(topSymbols).contains(buttonValue)){
+
+                    }else {
+                        if(buttonValue == "."){
+
+                        }else if ("0123456789".contains(buttonValue)){
+                            if(displayJLabel.getText() == "0"){
+                                ///
+                            }
+                        }
+                    }
+                }
+            });
         }
 
 

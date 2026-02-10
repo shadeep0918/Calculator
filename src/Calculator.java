@@ -50,6 +50,17 @@ public class Calculator {
         frame.add(disJPanel,BorderLayout.NORTH);
 
         buttoPanel.setLayout(new GridLayout(5,4));
+        buttoPanel.setBackground(customBlack);
+        frame.add(buttoPanel);
+
+        for(int i =0;i <buttonValues.length;i++){
+            JButton button = new JButton();
+            String buttonValue =buttonValues[i];
+            button.setFont(new Font("Arial",Font.PLAIN, 30));
+            button.setText(buttonValue);
+            buttoPanel.add(button);
+        }
+
 
 
 

@@ -85,8 +85,10 @@ public class Calculator {
 
                     }else {
                         if(buttonValue == "."){
-                            
-                            
+                            if(!displayJLabel.getText().contains(buttonValue)){
+                                displayJLabel.setText(displayJLabel.getText()+buttonValue);
+                            }
+
                         }else if ("0123456789".contains(buttonValue)){
                             if(displayJLabel.getText() == "0"){
                                 displayJLabel.setText(buttonValue);
